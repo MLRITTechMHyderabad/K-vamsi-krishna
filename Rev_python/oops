@@ -1,0 +1,27 @@
+# object 
+# class
+# ex:
+class MyCar:
+    def __init__(self,n,c,b,p):
+        print("Obj instantiating")
+        self.name = n
+        self.color = c
+        self.brand = b
+        self.price = p
+    def start(self, key=False):
+        if key:
+            print("Car started")
+        else:
+            print("Key not found")
+class Customer(MyCar):
+    def __init__(self, c_name,c_age,loc, n, c, b, p):
+         print("Customer instantiating")
+         super().__init__(n,c,b,p)
+         self.c_name = c_name
+         self.c_age = c_age
+         self.loc = loc
+thar = MyCar("Thar", "black","mahindra",190000)
+print(thar.name) 
+print(thar.start(True))
+c1 = Customer("a",32,"hyd","Thar", "black","mahindra", 100000)
+print(c1.c_age)
